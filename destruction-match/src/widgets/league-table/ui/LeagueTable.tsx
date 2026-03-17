@@ -13,7 +13,7 @@ export const LeagueTable = ({ league }: LeagueTableProps) => {
     teams.find((t) => t.id === id)?.name ?? id;
 
   return (
-    <div className="bg-gray-900 border border-yellow-900 p-4">
+    <div className="bg-white dark:bg-gray-900 border border-yellow-300 dark:border-yellow-900 p-4">
       <div className="flex items-center gap-3 mb-4">
         <h3 className="text-yellow-400 font-black tracking-wider">
           {league.name}
@@ -24,9 +24,9 @@ export const LeagueTable = ({ league }: LeagueTableProps) => {
         {league.matches.map((match) => (
           <div
             key={match.id}
-            className="flex items-center justify-between bg-gray-800 px-4 py-2 border border-gray-700"
+            className="flex items-center justify-between bg-slate-100 dark:bg-gray-800 px-4 py-2 border border-slate-200 dark:border-gray-700"
           >
-            <span className="text-white text-sm font-semibold">
+            <span className="text-slate-900 dark:text-white text-sm font-semibold">
               {getTeamName(match.teamAId)}
             </span>
             <div className="flex items-center gap-3">
@@ -48,7 +48,7 @@ export const LeagueTable = ({ league }: LeagueTableProps) => {
                 {match.teamBScore}
               </span>
             </div>
-            <span className="text-white text-sm font-semibold">
+            <span className="text-slate-900 dark:text-white text-sm font-semibold">
               {getTeamName(match.teamBId)}
             </span>
           </div>

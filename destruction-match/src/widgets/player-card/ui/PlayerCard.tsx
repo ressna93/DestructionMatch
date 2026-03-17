@@ -17,12 +17,12 @@ const positionColor: Record<string, "gold" | "blue" | "red" | "gray"> = {
 
 export const PlayerCard = ({ player, onRemove }: PlayerCardProps) => {
   return (
-    <div className="bg-gray-900 border border-yellow-900 p-4 flex items-center justify-between hover:border-yellow-600 transition-colors">
+    <div className="bg-white dark:bg-gray-900 border border-yellow-300 dark:border-yellow-900 p-4 flex items-center justify-between hover:border-yellow-500 dark:hover:border-yellow-600 transition-colors">
       <div className="flex items-center gap-3">
         <Badge color={positionColor[player.position]}>{player.position}</Badge>
         <div>
-          <p className="text-white font-bold">{player.nickname}</p>
-          <p className="text-gray-400 text-xs">
+          <p className="text-slate-900 dark:text-white font-bold">{player.nickname}</p>
+          <p className="text-slate-500 dark:text-gray-400 text-xs">
             {player.tier} · {player.score}점
           </p>
         </div>
